@@ -21,6 +21,6 @@ AppFactory::setContainer($container);
 
 $app = AppFactory::create();
 
-$app->get('/', 'App\Controller\IndecController:homepage');
+$app->get('/', 'App\Controller\IndexController:default');
 
 $app->run();
