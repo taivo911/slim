@@ -23,4 +23,6 @@ $app = AppFactory::create();
 
 $app->get('/', 'App\Controller\IndexController:default');
 
+$app->get('/search', 'App\Controller\IndexController:search');
+
 $app->run();
