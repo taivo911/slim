@@ -21,8 +21,10 @@ AppFactory::setContainer($container);
 
 $app = AppFactory::create();
 
-$app->get('/', 'App\Controller\IndexController:default');
+$app->get('/', 'App\Controller\AlbumsController:default');
+$app->get('/details/{id}', 'App\Controller\AlbumsController:details');
 
-$app->get('/search', 'App\Controller\IndexController:search');
+$app->get('/search', 'App\Controller\AlbumsController:search');
+$app->any('/form', 'App\Controller\AlbumsController:form');
 
 $app->run();
